@@ -1,0 +1,76 @@
+<div class="gral-container">
+
+
+    <div class="container apply-job">
+    
+    
+        <div class="container-fluid">
+          <h1>Apply to Job!</h1>
+          <div class="line bg-black"></div>
+      <form [formGroup]="fileForm" (ngSubmit)="saveFileInfo()">
+        <div class="container-div">
+    
+          <div class="form-group">
+            <label for="pwd">Name:</label>
+            <input type="text" class="form-control" formControlName="nombre" placeholder="Enter your name.." name="nombre">
+          </div>
+    
+          <div class="form-group">
+            <label for="pwd">Last Name:</label>
+            <input type="text" class="form-control" formControlName="apellido" placeholder="Enter your Last Name.." name="apellido">
+          </div>
+        </div>
+        
+        <div class="container-div">
+        
+            <div class="form-group">
+              <label for="pwd">Email:</label>
+              <input type="text" class="form-control" formControlName="email" placeholder="Enter your Email.." name="email">
+            </div>
+            <div class="form-group">
+              <label for="myFile">CV:</label>
+              <input type="file" class="form-control" (change)="handleFileInput($event)" name="file" accept="application/pdf">
+            </div>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-success">Apply Now!</button>
+      </form>
+        </div>
+      </div>
+    </div>
+    
+      <div class="card">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+          <div class="container-fluid">
+            <h1>Requests</h1>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>CV</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let file of files">
+                <td>
+                  {{file.nombre}}
+                </td>
+                <td>
+                  {{file.apellido}}
+                </td>
+                <td>
+                  {{file.email}}
+                </td>
+                <td>
+                  <input type="button" class="btn btn-success" (click)="downloadFile(file.id, file.contentType)" value="Download"/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>

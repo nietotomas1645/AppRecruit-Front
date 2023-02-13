@@ -1,0 +1,125 @@
+h1{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: #263238;
+}
+.sub-tittle{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #263238;
+}
+h6{
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+.container{
+    height: 100%;
+    padding: 25px;
+    padding-top: 69px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 1500px;
+    
+}
+
+input,select{
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid;
+    height: 35px;
+    padding: 4px;
+    box-shadow: 0 6px 15px 0 rgb(64 79 104 / 12%);
+}
+
+textarea{
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 4px;
+    resize: none;
+    box-shadow: 0 6px 15px 0 rgb(64 79 104 / 12%);
+}
+
+.gralForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftform {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.rightform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gralForm {
+    display: flex;
+    -moz-column-gap: 5%;
+    column-gap: 5%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form1, .form2, .form3{
+    display: flex;
+    flex-direction: row
+}
+
+.horizontalform{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 0px;
+}
+
+button{
+
+    color: white;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    
+
+}
+
+
+.btn-container {
+    margin-right: 8%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fa, .fas{
+    color: white;
+}
+.line {
+    width: 60px;
+    height: 4px;
+    background-color: #07a448 !important; 
+    margin: 16px auto 24px auto;
+    margin-bottom: 40px;
+  }
+
+  .title{
+    background-color: #E8EFF9;
+    width: 100%;
+    margin-top: 83px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-bottom: 75px !important;
+}

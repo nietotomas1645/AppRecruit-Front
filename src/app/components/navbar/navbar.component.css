@@ -1,0 +1,133 @@
+/*HEADER */
+
+header{
+    top: 0;
+    padding:0px 0;
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0px 0px  2px 2px rgb(18, 18, 18);
+  }
+  .menu{
+   margin-top: 10px;
+   height: 35px;
+  }
+  .menu ul{
+    padding: 0;
+    margin:0;
+  
+  }
+  
+  .menu ul li{
+    list-style-type: none;
+  
+    display: inline-block;
+  
+    margin-left: 24px;
+  
+    text-transform: uppercase;
+  
+  }
+  .menu ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .menu ul li a:hover{
+    color: #07a448;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+  .btn-login{
+  border: 2px solid #07a448;
+  border-radius: 5px;
+  padding: 10px;
+  }
+  .btn-login:hover{
+  box-shadow: 0 0px 15px 5px rgb(33 109 65 / 45%);
+  }
+  
+  @media(max-width: 999px){
+    
+  .menu{
+    position: fixed;
+    right: -280px;
+    top:64;
+    width: 280px;
+    height: 100%;
+    background: #222;
+    transition: 0.4s ease-in-out;
+  
+  }
+  .menu ul li {
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 10px 0 10px 26px;
+    border-bottom: 1px solid #312f2f;
+  
+  }
+  .menu_icon{
+    display: inline-block;
+    position: relative;
+    right: 0;
+    top: 20 px;
+  
+  }
+  
+  
+  .menu_icon span {
+    width: 32px;
+    height: 3px;
+    background: #ffffff;
+    display: block;
+    transition: 0.2s ease-in-out;
+  
+  }
+  .menu_icon span:nth-child(2) {
+    margin: 4px 0;
+  
+  }
+  .menu_iconClass span:nth-child(2){
+  
+  display: none;
+  }
+  
+  .menu_iconClass span:nth-child(1){
+  
+    transform: rotate(40deg);
+  }
+  
+  
+  .menu_iconClass span:nth-child(3){
+  
+    transform: rotate(-40deg);
+    margin-top: -3px;
+  }
+  
+  .menuClasse{
+  
+  right: 0;
+  transition: 0.4s ease-in-out;
+  
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+  }
+  }
+  
+  
+  
+  @media(min-width: 999px){
+    
+    .col-md-9.col-sm-9.col-9.text-end {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }

@@ -1,0 +1,124 @@
+<app-navbar></app-navbar>
+<div class="title">
+    <h1>You are one step away from finding your ideal candidate!</h1>
+    <div class="line bg-black"></div>
+</div>
+<div class="container">
+    
+    <form [formGroup]= "sendJobForm" id="sendJobForm">
+        
+
+        
+        <div class="gralForm">
+            <div class="leftform">  
+                
+                <div class="form1">
+                <div class="horizontalform">
+                <h6>Position</h6>
+                <input formControlName="position"  type="text" placeholder="Position">
+                <small *ngIf="sendJobForm.controls ['position'].dirty && sendJobForm.hasError('required','position')" class="text-danger">*Position is required</small>
+                </div>
+                <div class="horizontalform">
+                <h6>Company</h6>
+                <input formControlName="company"  type="text" placeholder="Company Name">
+                <small *ngIf="sendJobForm.controls ['company'].dirty && sendJobForm.hasError('required','company')" class="text-danger">*Company is required</small>
+                </div>
+                <div class="horizontalform">
+                <h6>Seniority</h6>        
+                <select name="seniority" id="seniority" formControlName="seniority" >
+                    <option value="" selected>Select Seniority</option>
+                    <option >Trainee</option>
+                    <option >Jr</option>
+                    <option >Ssr</option>
+                    <option >Sr</option>
+                </select>
+                <small *ngIf="sendJobForm.controls ['seniority'].dirty && sendJobForm.hasError('required','seniority')" class="text-danger">*Seniority is required</small>
+                </div>
+                </div>
+                <div class="form2">
+                    <div class="horizontalform">
+                <h6>Years of experience</h6>        
+                <select name="yearsExperience" id="experience" formControlName="experience">
+                    <option value="" selected>Select Experience</option>
+                    <option >without experience</option>
+                    <option >0 - 1</option>
+                    <option >1 - 2</option>
+                    <option >3 - 5</option>
+                    <option >5 - 10</option>
+                </select>
+                <small *ngIf="sendJobForm.controls ['experience'].dirty && sendJobForm.hasError('required','experience')" class="text-danger">*Experience is required</small>
+                </div>
+                <div class="horizontalform">
+                <h6>Technology</h6>        
+                <select name="lenguajes" id="technology" formControlName="technology">
+                    <option value="" selected>Select Language</option>
+                    <option >Angular</option>
+                    <option >React</option>
+                    <option >Vue</option>
+                    <option >Typescript</option>
+                    <option >Javascript</option>
+                    <option >.Net</option>
+                    <option >C#</option>
+                    <option >Java</option>
+                    <option >Python</option>
+                    <option >Php</option>
+                    <option >Laravel</option>
+                    <option >MySql</option>
+                    <option >Spring Boot</option>
+                </select>
+                <small *ngIf="sendJobForm.controls ['technology'].dirty && sendJobForm.hasError('required','technology')" class="text-danger">*Technology is required</small>
+                </div>
+                <div class="horizontalform">
+                <h6>Workplace</h6>        
+                <select name="workplace" id="workplace" formControlName="workplace">
+                    <option value="" selected>Select Workplace</option>
+                    <option >Office</option>
+                    <option >Remote</option>
+                    <option >Hybrid</option>
+                </select>
+                <small *ngIf="sendJobForm.controls ['workplace'].dirty && sendJobForm.hasError('required','workplace')" class="text-danger">*Workplace is required</small>
+                </div>
+                </div>
+                <div class="form3">
+                <div class="horizontalform">
+                <h6>Location</h6>
+                <input formControlName="location"  type="text" placeholder="Location">
+                <small *ngIf="sendJobForm.controls ['location'].dirty && sendJobForm.hasError('required','location')" class="text-danger">*Location is required</small>
+                </div>
+                <div class="horizontalform">
+                <h6>Studies</h6>        
+                <select name="studies" id="studies" formControlName="studies">
+                    <option value="" selected>Select Studies</option>
+                    <option >Student</option>
+                    <option >Graduate</option>
+                    <option >Without Studies</option>
+                </select>
+                <small *ngIf="sendJobForm.controls ['studies'].dirty && sendJobForm.hasError('required','studies')" class="text-danger">*Studies is required</small>
+                </div>
+                <div class="horizontalform">
+                <h6>Salary in USD</h6>
+                <input formControlName="salary"  type="number" placeholder="Salary range">
+                <small *ngIf="sendJobForm.controls ['salary'].dirty && sendJobForm.hasError('required','salary')" class="text-danger">*Salary is required</small>
+                </div>
+                </div>
+            </div> 
+        <div class="rightform">
+    
+        <h6>About the Position</h6> 
+        <textarea name="aboutpos" id="aboutpos" cols="80" rows="10" formControlName="aboutpos" placeholder=" Write a brief description about the position to be covered.."></textarea>
+        <small *ngIf="sendJobForm.controls ['aboutpos'].dirty && sendJobForm.hasError('required','aboutpos')" class="text-danger">*About the Position is required</small>   
+        <h6>Benefits</h6> 
+        <textarea name="benefits" id="benefits" cols="80" rows="5" formControlName="benefits" placeholder=" Write a brief description about the benefits for your workers.."></textarea>
+        <small *ngIf="sendJobForm.controls ['benefits'].dirty && sendJobForm.hasError('required','benefits')" class="text-danger">*Benefits is required</small>   
+        </div>
+        </div>
+        <br>
+        <br>
+        <p><b>*Important: </b>It is essential to put the exact salary range. Let's avoid wasting the time of the candidates and the recruiter himself.</p>
+        <br>
+    
+        <div class="btn-container">
+        <button [disabled]="sendJobForm.invalid" (click)="sendJob()" type="submit" class="btn btn-primary btn-block mt-4 " ><a class="fas fa-check"></a></button>
+        </div>
+    </form>
+    </div>

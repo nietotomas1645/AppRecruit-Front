@@ -1,0 +1,43 @@
+<header>
+    <div  class="container">
+  
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3 col-3 text-start">
+          <div class="logo">
+            <img src="assets\images\wehiring.png" alt="" class="img-logo" style="width: 80px; height: 80px; cursor: pointer; "routerLink="/">
+          </div>
+  
+        </div>
+  
+  
+        <div class="col-md-9 col-sm-9 col-xs-9 col-9 text-end">
+  
+  
+        <div class="menu_icon" [class.menu_iconClass]="menu_icon_variable" (click)="openMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+  
+  
+          <div class="menu" [class.menuClasse]="menuVariable">
+            <ul>
+              <li><a href="" routerLink="/">Home</a></li>              
+              <li><a href="#getjob" routerLink="/getjob">Get a job</a></li>
+              <li><a href="#about" routerLink="/postjob">Hiring</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="#loginheader" routerLink="/login" class="btn-login">Login / LogOut</a></li>
+            </ul>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </header>
+  
+  
+
+
+  

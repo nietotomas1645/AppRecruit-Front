@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="title">
+  <h1 class="h1-jobs">Position Details</h1>
+  <div class="line bg-black"></div>
+</div>
+<div class="container detail-container">
+
+    <div class="row">
+
+        <div class="left-div col-lg-4">
+            <img src="\assets\small-img.png" alt="">
+        </div>
+        <div class="right-div col-lg-8">
+            <table class="table">
+     
+                <tbody>
+                  <tr>
+        
+                    <td><p><i class="fal fa-crosshairs"></i><b>Position: </b> {{job.position}}</p></td>
+                    <td><p><i class="fas fa-building"></i><b>Company: </b> {{job.company}}</p></td>
+                    <td><p><i class="fas fa-user-chart"></i><b>Seniority: </b> {{job.seniority}}</p></td>
+                  </tr>
+                  <tr>
+                    <td><p><i class="fas fa-code"></i><b>Technology: </b> {{job.technology}}</p></td>
+                    <td><p><i class="fas fa-location-circle"></i><b>Workplace: </b> {{job.workplace}}</p></td>
+                    <td><p><i class="far fa-chart-line"></i><b>Experience: </b> {{job.experience}} Years</p></td>
+                  </tr>
+                  <tr>
+                    <td><p><i class="far fa-sack-dollar"></i><b>Salary: </b> ${{job.salary}} usd</p></td>
+                    <td><p><i class="fas fa-map-pin"></i><b>Location: </b> {{job.location}}</p></td>
+                    <td><p><i class="fas fa-book"></i><b>Studies: </b> {{job.studies}}</p></td>
+
+        
+                  </tr>
+                </tbody>
+              </table>
+
+            
+
+        </div>
+        <div class="bottom-img">
+            <td><p><i class="fas fa-user-plus"></i><b>About the Position:</b></p></td>
+            <p>{{job.aboutpos}}</p>
+            <td><p><i class="far fa-smile-beam"></i><b>Benefits:</b></p></td>
+            <p>{{job.benefits}}</p>
+        </div>
+
+    </div>
+</div>
+
+<app-apply-job></app-apply-job>
