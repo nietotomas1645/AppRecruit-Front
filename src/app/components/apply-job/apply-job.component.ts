@@ -1,7 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
+import { Job } from 'src/app/interfaces/job';
 import { SendjobService } from 'src/app/services/sendjob.service';
 
 @Component({
@@ -11,6 +13,7 @@ import { SendjobService } from 'src/app/services/sendjob.service';
 })
 export class ApplyJobComponent {
   ngOnInit(): void {
+    this.getJobId();
   }
 
 
@@ -21,9 +24,12 @@ export class ApplyJobComponent {
   });
   fileToUpload: any;
   files: any = [];
+  id!: number;
+  job!: Job;
 
-  constructor(private jobservice: SendjobService, private aRoute: ActivatedRoute ,private http:  HttpClient) {
+  constructor(private jobservice: SendjobService, private aRoute: ActivatedRoute ,private http:  HttpClient,private toast: NgToastService,private router: Router) {
     this.getAllFiles();
+    this.id = Number(this.aRoute.snapshot.paramMap.get('id'));
    }
 
 
@@ -40,8 +46,17 @@ export class ApplyJobComponent {
     return this.http.post('https://localhost:7168/api/FileManager', formData,
     {
       headers : new HttpHeaders()})
-    .subscribe(() => alert("File uploaded"));
-  }
+      .subscribe({
+        next:(res)=>{
+          this.toast.success({detail:"Successful Upload", duration: 5000})
+          this.fileForm.reset();
+          this.router.navigate(['getjob']);
+        }
+        ,error:(err=>{
+          this.toast.error({detail:"ERROR", summary: (err?.error.message),duration: 5000})
+        })    
+       })
+      }
 
   // -------------------- VIEW AND DOWNLOAD FILES --------------------------
   getAllFiles()
@@ -63,5 +78,11 @@ export class ApplyJobComponent {
       window.open(url);
       console.log("Success");
   });
+  }
+
+  getJobId(){
+    this.jobservice.getJobById(this.id).subscribe(data =>{
+      this.job = data;
+    })
   }
 }

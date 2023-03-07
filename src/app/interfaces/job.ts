@@ -10,5 +10,5 @@ export interface Job {
     aboutpos: string,
     benefits: string,
     workplace: string,
-    company: string
+    company: string,
 }

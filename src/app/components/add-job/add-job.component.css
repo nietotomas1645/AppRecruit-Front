@@ -8,6 +8,15 @@ h1{
     margin-top: 30px;
     color: #263238;
 }
+h1{
+    font-size: 50px;
+    font-weight: 600;
+  
+  }
+  
+  p,li{
+    font-size: 16px;
+  }
 h6{
     margin-bottom: 20px;
     margin-top: 25px;
@@ -103,7 +112,7 @@ button{
 .line {
     width: 60px;
     height: 4px;
-    background-color: #07a448 !important; 
+    background-color: #5e9ff5 !important; 
     margin: 16px auto 24px auto;
     margin-bottom: 40px;
   }

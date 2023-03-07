@@ -1,14 +1,22 @@
 .line {
     width: 60px;
     height: 4px;
-    background-color: #07a448 !important; 
+    background-color: #5e9ff5 !important; 
     margin: 16px auto 24px auto;
 }
 h1{
     text-align: center;
     margin-top: 40px;
 }
-
+h1{
+    font-size: 50px;
+    font-weight: 600;
+  
+  }
+  
+  p,li{
+    font-size: 16px;
+  }
 .container{
     max-width: 1500px;
 }
@@ -39,7 +47,7 @@ label{
 .line {
     width: 60px;
     height: 4px;
-    background-color: #07a448 !important; 
+    background-color: #5e9ff5 !important; 
     margin: 16px auto 24px auto;
     margin-bottom: 50px;
 }

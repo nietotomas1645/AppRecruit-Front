@@ -14,8 +14,8 @@ import { ViewJobsComponent } from './components/view-jobs/view-jobs.component';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import {NgxPaginationModule} from 'ngx-pagination';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -32,6 +32,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NgToastModule } from 'ng-angular-popup';
+import { FooterComponent } from './components/footer/footer.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { NgToastModule } from 'ng-angular-popup';
     LoginComponent,
     NavbarComponent,
     SignupComponent,
-    ViewJobsComponent
+    ViewJobsComponent,
+    FooterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ import { NgToastModule } from 'ng-angular-popup';
     MatSnackBarModule,
     MatProgressBarModule,
     MatGridListModule,
-    NgToastModule
+    NgToastModule,
+    NgxPaginationModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
