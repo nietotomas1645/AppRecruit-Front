@@ -150,6 +150,7 @@ img {
 .img-about{
     border-radius: 8px;
     box-shadow: 0 6px 15px 0 rgb(64 79 104 / 5%);
+    margin-bottom: 80px;
 }
 
 .section-padding {
@@ -405,7 +406,9 @@ h1 {
 	-webkit-animation: kenburns-top 5s ease-out both;
 	        animation: kenburns-top 5s ease-out both;
 }
-
+.toast-right-top {
+    margin-top: 80px;
+}
 /**
  * ----------------------------------------
  * animation kenburns-top

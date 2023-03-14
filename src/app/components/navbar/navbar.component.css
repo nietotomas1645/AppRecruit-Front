@@ -44,6 +44,19 @@ header{
   .btn-login:hover{
   box-shadow: 0 0px 15px 5px rgb(33 109 65 / 45%);
   }
+
+  .btn-logOut{
+    border: 2px solid #f01a13;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+  }
+
+  .btn-logOut:hover{
+    box-shadow: 0 0px 15px 5px rgba(194, 38, 38, 0.45);
+    }
+
   h1{
     font-size: 50px;
     font-weight: 600;

@@ -1,3 +1,4 @@
+import { Token } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ export class LoginComponent {
   isText: boolean = false;
   eyeIcon: string ="fa-eye-slash"
   loginForm!: FormGroup;
-  
+  tokenIsActive?: Boolean;
 
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router,private toast: NgToastService) { }
 
@@ -42,7 +43,9 @@ export class LoginComponent {
         next:(res)=>{
           this.toast.success({detail:"SUCCESS", summary:res.message,duration: 5000})
           this.loginForm.reset();
+          this.auth.storeToken(res.token);
           this.router.navigate(['getjob'])
+          this.tokenIsActive = true;
         },
         error:(err)=>{
           this.toast.error({detail:"ERROR", summary:"Something when wrong!",duration: 5000})

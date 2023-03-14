@@ -12,3 +12,7 @@ h1{
     font-weight: 600;
   
   }
+
+  .toast-right-top {
+    margin-top: 80px !important;
+}

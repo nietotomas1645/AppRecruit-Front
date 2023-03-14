@@ -26,7 +26,10 @@
               <li><a href="#getjob" routerLink="/getjob">Get a job</a></li>
               <li><a href="#about" routerLink="/postjob">Hiring</a></li>
               <li><a href="">Contact</a></li>
-              <li><a href="#loginheader" routerLink="/login" class="btn-login">Login / LogOut</a></li>
+              <li *ngIf="!isLoggedIn"><a href="#loginheader" routerLink="/login" class="btn-login">Login / Register</a></li>
+              <li *ngIf="isLoggedIn"><a (click)="logout()" class="btn-logOut">Log Out</a></li>
+
+              
             </ul>
           </div>
   

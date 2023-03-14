@@ -123,3 +123,7 @@ span.fa.fa-eye-slash {
 span.fa.fa-eye{
     padding-right: 2%;
 }
+
+.toast-right-top {
+    margin-top: 80px;
+}
